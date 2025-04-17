@@ -1,0 +1,17 @@
+name: agidash
+workspace:
+  load:
+    - python_file:
+        path: ingest/google_trends.py
+    - python_file:
+        path: ingest/polymarket.py
+    - python_file:
+        path: ingest/capability_scraper.py
+    - python_file:
+        path: ingest/legislation.py
+    - python_file:
+        path: ingest/news_pixels.py
+    - python_file:
+        path: features/indices.py
+    - python_file:
+        path: detect/bocd.py

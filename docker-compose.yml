@@ -1,0 +1,31 @@
+services:
+  duckdb-vol:
+    image: busybox
+    command: tail -f /dev/null
+    volumes:
+      - data:/app/data
+  dagster:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - data:/app/data
+    ports:
+      - "3000:3000"
+    depends_on:
+      - duckdb-vol
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: streamlit run dashboard/app.py --server.address 0.0.0.0 --server.port 8501
+    volumes:
+      - .:/app
+      - data:/app/data
+    ports:
+      - "8501:8501"
+    depends_on:
+      - duckdb-vol
+volumes:
+  data: 

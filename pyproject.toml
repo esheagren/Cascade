@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "agidash"
+version = "0.1.0"
+description = "Bayesian early-warning dashboard for an AGI-perception cascade"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+dagster = "*"
+dagster-webserver = "*"
+duckdb = "*"
+pandas = "*"
+numpy = "*"
+scipy = "*"
+pytrends = "*"
+selenium = "*"
+pillow = "*"
+opencv-python = "*"
+polymarket-py = "*"
+py-clob-client = "*"
+pandera = "*"
+streamlit = "*"
+python-dotenv = "*"
+slack_sdk = "*"
+bayesian-changepoint-detection = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+vcrpy = "*"
+pre-commit = "*"
+black = "*"
+isort = "*"
+flake8 = "*"
+mypy = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
