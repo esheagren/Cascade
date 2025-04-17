@@ -1,4 +1,4 @@
-# AGIDash
+# Cascade
 
 Bayesian early-warning dashboard for an AGI-perception cascade.
 
